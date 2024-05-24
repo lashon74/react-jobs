@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import { toast } from "react-toastify";
+import { toast } from "react-toastify"; //npm i react-toastify used in mainlayout
 
 const AddJobPage = ({ addJobSubmit }) => {
+  //Creating a state for each field so it can be updated
   const [title, setTitle] = useState("");
   const [type, setType] = useState("Full-Time");
   const [location, setLocation] = useState("");

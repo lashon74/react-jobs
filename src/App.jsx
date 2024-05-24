@@ -87,6 +87,7 @@ const App = () => {
       <Route path="/" element={<MainLayout />}>
         <Route index element={<HomePage />} />
         <Route path="/jobs" element={<JobsPage />} />
+        {/* this addjobsubmit will be triggered when the form is submitted and it will run the addjob above in this file */}
         <Route path="/add-job" element={<AddJobPage addJobSubmit={addJob} />} />
         <Route
           path="/jobs/:id"

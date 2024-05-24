@@ -36,6 +36,8 @@
 }
 //npm i -D json-server used for json server need to add it to packages.json npm run server   to run server
 //npm i react-spinners
+//npm run build to get a production build folder
+//npm run preview to run production build
 import {
   Route,
   createBrowserRouter,
@@ -49,6 +51,7 @@ import JobsPage from "./pages/JobsPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import JobPage, { jobLoader } from "./pages/JobPage";
 import AddJobPage from "./pages/AddJobPage";
+import EditJobPage from "./pages/EditJobPage";
 
 const App = () => {
   // Add New Job
@@ -89,6 +92,11 @@ const App = () => {
         <Route path="/jobs" element={<JobsPage />} />
         {/* this addjobsubmit will be triggered when the form is submitted and it will run the addjob above in this file */}
         <Route path="/add-job" element={<AddJobPage addJobSubmit={addJob} />} />
+        <Route
+          path="/edit-job/:id"
+          element={<EditJobPage updateJobSubmit={updateJob} />}
+          loader={jobLoader}
+        />
         <Route
           path="/jobs/:id"
           element={<JobPage deleteJob={deleteJob} />}

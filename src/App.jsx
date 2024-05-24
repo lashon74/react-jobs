@@ -34,6 +34,8 @@
   // };
   // export default App;
 }
+//npm i -D json-server used for json server need to add it to packages.json npm run server   to run server
+//npm i react-spinners
 import {
   Route,
   createBrowserRouter,

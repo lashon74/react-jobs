@@ -1,4 +1,4 @@
-import { useParams, useLoaderData, useNavigate } from "react-router-dom";
+import { useParams, useLoaderData, useNavigate } from "react-router-dom"; //used with loader that can be used in other files similar to use effect
 import { FaArrowLeft, FaMapMarker } from "react-icons/fa";
 import { Link } from "react-router-dom";
 // import { toast } from "react-toastify";
